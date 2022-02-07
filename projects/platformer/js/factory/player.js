@@ -126,18 +126,18 @@
                 yOffset = 9,
                 state = createState(name);
                 state.fire = state.duck = state.idle = state.walk = state.run = 
-                state.stop = state.duck = state.jump = state.flyingJump = doNothing;
+                state.stop = state.duck = state.jump = state.flyingJump = stop;
             state.enter = function() {
                 console.log(`entering ${ name }`);
-                asset.body.bounce.y = 0;
-                game.add.tween(asset.body).to( { y: asset.body.y -100 }, 1000, Phaser.Easing.Linear.None, true);
+                asset.body.bounce.y = .1;
+                game.add.tween(asset.body).to( { y: asset.body.y -10 }, 50, Phaser.Easing.Linear.None, true);
 
-                asset.body.velocity.x = 200 * _direction;
+                asset.body.velocity.x = 500 * _direction;
                 asset.x += xOffset * _direction;
                 asset.y += yOffset;
             };
             state.exit = function() {
-                asset.body.bounce.y = 0.4;
+                asset.body.bounce.y = 0;
                 asset.x -= xOffset * _direction;
                 asset.y -= yOffset;
             };

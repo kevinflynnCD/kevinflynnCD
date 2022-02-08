@@ -26,9 +26,25 @@
         ////////////////////////////////////////////////////////////////////////
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
-        // example: 
-        createCannon("top", 450);
+var rightMax = 500;
+var topMax = 0;
+function spawnCannons () {
+    createCannon("top", topMax + 100);
+    createCannon("top", topMax + 150);
+    createCannon("top", topMax + 200);
+    createCannon("top", topMax + 250);
+    createCannon("top", topMax + 300);
+    createCannon("top", topMax + 350);
+    createCannon("top", topMax + 400);
+    createCannon("top", topMax + 450);
+    createCannon("top", topMax + 500);
+    createCannon("top", topMax + 550);
+    createCannon("top", topMax + 600);
+    createCannon("top", topMax + 650);
+    createCannon("top", topMax + 700);
+}
         
+spawnCannons();
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////

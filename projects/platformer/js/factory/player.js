@@ -101,6 +101,7 @@
         }
         
         function createFireState(name) {
+            
             let 
                 xOffset = 14,
                 yOffset = 9,
@@ -126,7 +127,7 @@
                 yOffset = 9,
                 state = createState(name);
                 state.fire = state.duck = state.idle = state.walk = state.run = 
-                state.stop = state.duck = state.jump = state.flyingJump = stop;
+                state.stop = state.duck = state.jump = state.flyingJump = run;
             state.enter = function() {
                 console.log(`entering ${ name }`);
                 asset.body.bounce.y = .1;
@@ -268,6 +269,7 @@
                 fire.onUpdate.remove(onUpdate, this);
                 stop();
             }, this);
+            createProjectile();
         }
         
         function setState(state) {

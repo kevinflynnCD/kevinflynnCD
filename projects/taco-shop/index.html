@@ -3,12 +3,13 @@
     <head>
         <title>Taco Shop</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="main.js"></script>
         <style>
-            body {
+            .menu-item {
                 background-color: rgb(117, 255, 221);
             }
 
-            button {
+            #main {
                 background-color: red;
             }
 
@@ -41,76 +42,48 @@
             <nav>
                 <h1>Taco Shop</h1>
                 <div id="take-order">
-                    <p>When you're ready to place your order, click here: </p>
-                    <button>Place Order</button>
+                    <p>to add an item, click on it</p>
+                    <p>When you're ready to take your bill, click here: </p>
+                    <button id="main"">take bill</button>
                 </div>
             </nav>
             <main>
                 <h3>Menu</h3>
                 <div id="menu">
-                    <div id="hummus" class="menu-item">
+                    <button id="hummus" class="menu-item">
                         <h4> - Hummus</h4>
                         <img src="https://i.ytimg.com/vi/EtU2f0qrGrY/maxresdefault.jpg">
                         <h4>1000.00</h4>
-                    </div>
-                    <div id="three-tacos" class="menu-item">
+                    </button>
+                    <button id="three-tacos" class="menu-item">
                         <h4> - Three Tacos</h4>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG-phbs_RqH7HoN_2XLKiTXd0zTOeMGLncug&usqp=CAU">
                         <h4>6.99</h4>
-                    </div>
-                    <div id="five-tacos" class="menu-item">
+                    </button>
+                    <button id="five-tacos" class="menu-item">
                         <h4> - Five Tacos</h4>
                         <img src="https://i2.wp.com/thesuburbansoapbox.com/wp-content/uploads/2021/02/Birria-Tacos-8.jpg">
                         <h4>9.99</h4>
-                    </div>
-                    <div id="tiger" class="menu-item">
+                    </button>
+                    <button id="tiger" class="menu-item">
                         <h4> - tiger: low quality</h4>
+                        <a href="https://grabcad.com/"></a>
                         <img src="https://netrinoimages.s3.eu-west-2.amazonaws.com/2015/06/04/389963/117621/tiger_3d_model_c4d_max_obj_fbx_ma_lwo_3ds_3dm_stl_1426555_o.png">
                         <h4>1 bean</h4>
-                    </div>
-                    <div id="rick astley" class="menu-item">
+                    </button>
+                    <button id="rick astley" class="menu-item">
                         <h4> - rick astley</h4>
+                        <a href="https://www.youtube.com/watch?v=a3Z7zEc7AXQ"></a>
                         <img src="https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png?w=1024">
                         <h4>6.66</h4>
-                    </div>
-                    <div id="robotics" class="menu-item">
+                    </button>
+                    <button id="robotics" class="menu-item">
                         <h4> - mhs robotics team</h4>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHbmNXCSmqcK653pu86GO05FwCDTrq3c7z_3nRsJ7mTFSnrMBpSXhGVB5df2BkN9xMlXE&usqp=CAU">
                         <h4>300.00</h4>
-                    </div>
+                    </button>
                 </div>
             </main>
-        </div>
-        <script>
-            function sellStuff () {
-                var total = 0;
-                function orderDeclaration () {
-                    var orderNumber = prompt('what would you like to order? (enter info as a number, from 1-6)');
-                    if (orderNumber === '1') {
-                        total += 1000.00;
-                    } else if (orderNumber === '2') {
-                        total += 6.99;
-                    } else if (orderNumber === '3') {
-                        total += 9.99;
-                    } else if (orderNumber === '4') {
-                        total += " 1 bean";
-                    } else if (orderNumber === '5') {
-                        window.open('https://www.youtube.com/watch?v=a3Z7zEc7AXQ', '_blank');
-                        total += 6.66;
-                    } else if (orderNumber === '6') {
-                        total += 300.00;
-                    } else {
-                        alert("incorrect order")
-                    }
-                    var yes = prompt("want anything else? (enter as yes or no)")
-                if (yes === "yes") {
-                    orderDeclaration();
-                    } 
-                }
-                orderDeclaration();
-                alert(total);
-            }
-            $('button').on('click', sellStuff);
-        </script>
+        </div>    
     </body>
 </html>

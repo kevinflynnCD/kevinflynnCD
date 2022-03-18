@@ -40,43 +40,43 @@
         <div id="all-contents">
             <nav>
                 <h1>Taco Shop</h1>
+                <p>to add an item, click on it; to delete all, reload</p>
                 <div id="take-order">
-                    <p>to add an item, click on it</p>
-                    <p>When you're ready to take your bill, click here: </p>
+                    <p>when you're ready to take your bill, click here: </p>
                     <button id="main"">take bill</button>
                 </div>
             </nav>
             <main>
                 <h3>Menu</h3>
                 <div id="menu">
-                    <button id="hummus" class="menu-item">
+                    <button id="hummus" class="menu-item" onclick="sellStuff(1)">
                         <h4> - Hummus</h4>
                         <img src="https://i.ytimg.com/vi/EtU2f0qrGrY/maxresdefault.jpg">
                         <h4>1000.00</h4>
                     </button>
-                    <button id="three-tacos" class="menu-item">
+                    <button id="three-tacos" class="menu-item" onclick="sellStuff(2)">
                         <h4> - Three Tacos</h4>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG-phbs_RqH7HoN_2XLKiTXd0zTOeMGLncug&usqp=CAU">
                         <h4>6.99</h4>
                     </button>
-                    <button id="five-tacos" class="menu-item">
+                    <button id="five-tacos" class="menu-item" onclick="sellStuff(3)">
                         <h4> - Five Tacos</h4>
                         <img src="https://i2.wp.com/thesuburbansoapbox.com/wp-content/uploads/2021/02/Birria-Tacos-8.jpg">
                         <h4>9.99</h4>
                     </button>
-                    <button id="tiger" class="menu-item">
-                        <h4> - tiger: low quality</h4>
-                        <a href="https://grabcad.com/"></a>
-                        <img src="https://netrinoimages.s3.eu-west-2.amazonaws.com/2015/06/04/389963/117621/tiger_3d_model_c4d_max_obj_fbx_ma_lwo_3ds_3dm_stl_1426555_o.png">
-                        <h4>1 bean</h4>
-                    </button>
-                    <button id="rick astley" class="menu-item">
-                        <h4> - rick astley</h4>
-                        <a href="https://www.youtube.com/watch?v=a3Z7zEc7AXQ"></a>
-                        <img src="https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png?w=1024">
-                        <h4>6.66</h4>
-                    </button>
-                    <button id="robotics" class="menu-item">
+                        <button id="tiger" class="menu-item" onclick="sellStuff(4)">
+                            <h4> - tiger: low quality</h4>
+                            <img src="https://netrinoimages.s3.eu-west-2.amazonaws.com/2015/06/04/389963/117621/tiger_3d_model_c4d_max_obj_fbx_ma_lwo_3ds_3dm_stl_1426555_o.png">
+                            <h4>1 bean</h4>
+                        </button>
+                    <a href="https://www.youtube.com/watch?v=a3Z7zEc7AXQ">
+                        <button id="rick-astley" class="menu-item" onclick="sellStuff(5)">
+                            <h4> - rick astley</h4>
+                            <img src="https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png?w=1024">
+                            <h4>6.66</h4>
+                        </button>
+                    </a>
+                    <button id="robotics" class="menu-item" onclick="sellStuff(6)">
                         <h4> - mhs robotics team</h4>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHbmNXCSmqcK653pu86GO05FwCDTrq3c7z_3nRsJ7mTFSnrMBpSXhGVB5df2BkN9xMlXE&usqp=CAU">
                         <h4>300.00</h4>

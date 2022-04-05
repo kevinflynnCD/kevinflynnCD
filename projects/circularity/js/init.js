@@ -19,13 +19,6 @@ var init = function (window) {
         ///////////////// PROGRAM SETUP ////////////////////////////
         ////////////////////////////////////////////////////////////
         
-    while (1) {
-        if (fps === 0) {
-            while (1) {
-                drawCircle();
-            }
-        }
-    }
 
         // TODO 1 : Declare and initialize our variables
     var circle;
@@ -43,7 +36,7 @@ var init = function (window) {
         // TODO 3 / 8 : Call the drawCircle() function 
         var numCircles = 0;
     for (var i = 0; i <= 10; i++) {
-        setInterval(drawCircle, 1 / i * 2);
+        setInterval(drawCircle, 1 / i * 3);
     }
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////

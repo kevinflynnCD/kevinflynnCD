@@ -2,22 +2,33 @@
 <html>
     <head>
         <title>wayfinder</title>
-        <script src="main.js"></script>
         <style>
+
             #way {
                 padding : 10px;
             }
 
             #find {
                 padding : 10px;
+                background-color: rgba(136, 0, 255, 0.257);
+                border-color: black;
+                border-radius: 5px;
+                border-style: solid;
+                width: 500px;
+                height: 100px;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 20px;
             }
 
             .b {
-                padding : 10px;
-                width : 10px;
-                height : 10px;
-                margin : 20px;
-                size : 100px;
+                border-width: 2px;
+                border-style: solid;
+                width: 100px;
+                height: 100px;
+                margin: 20px;
+                size: 100px;
+                background-color: goldenrod;
+                border-color: orange;
             }
         </style>
     </head>
@@ -28,7 +39,9 @@
         <p id="find">
             find your own path
         </p>
-        <button class="b">yes</button>
-        <button class="b">no</button>
+        <button class="b" id="yes" onclick="clic(true)">yes</button>
+        <button class="b" id="no" onclick="clic(false)">no</button>
+        <p id="textbox"></p>
+        <script src="main.js"></script>
     </body>
 </html>

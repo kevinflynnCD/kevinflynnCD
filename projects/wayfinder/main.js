@@ -3,16 +3,18 @@ var path1;
 var loneWandererPath;
 var homePath;
 var namePath;
+var grampsPath;
+var lonePath;
 
 var playerInfo = {
-    playerName,
-    playerFavoriteColor,
-    playerFavoriteAnimal,
-    playerFavoriteFood
+    playerName: null,
+    playerFavoriteColor: null,
+    playerFavoriteAnimal: null,
+    playerFavoriteFood: null
 }
 
 function addInfo (info, description) {
-    playerInfo.info = prompt(description);
+    playerInfo[info] = prompt(description);
 }
 
 function changeText (newText) {
@@ -63,8 +65,8 @@ function clic (ans) {
         } else {
             if (ans === true) {
                 changeText("you find a textbox of your own. the old man asks your name.")
+                addInfo('playerName', "what's your name?")
                 namePath === true;
-                addInfo('playerInfo', "what's your name?")
             } else {
                 changeText("you don't find a textbox, but you do find an abandoned cottage. do you stay there?")
                 homePath === true;
@@ -82,6 +84,7 @@ function clic (ans) {
                 changeText("you decide to stay and work to live. the old man says he'll be nearby if you need anything.")
             } else {
                 changeText("you don't want to stay. the old man asks if you want to stay with him instead.")
+                grampsPath = true;
             }
         } else {
             changeText("the old man says 'Hello, " + playerInfo.playerName + "'")
@@ -92,6 +95,7 @@ function clic (ans) {
                 changeText("you are more than just a wanderer. you are mighty. you are powerful. you are...THETOSCZN!!!")
             } else {
                 changeText("refresh your browser to play again.")
+                buttonClicks = 99;
             }
         } else  if (homePath === true) {
             if (ans === true) {
@@ -102,11 +106,31 @@ function clic (ans) {
         } else {
             if (ans === true) {
                 changeText("the old man asks for your favorite food.")
+                addInfo('playerFavoriteFood', "what's your favorite food?")
             } else {
                 changeText("the old man asks 'what?' then he leaves you to die. that was rude. refresh your browser to play again.")
+                buttonClicks = 99;
             }
         }
-    
+    } else if (buttonClicks === 8) {
+        if (path1 === true) {
+            changeText("refresh your browser to play again.")
+            buttonClicks === 99;
+        } else if (homePath ===  true) {
+            if (grampsPath === true) {
+                if (ans === true) {
+                    changeText("you decide to live with the old man, who tells you his name is Garshevik.")
+                } else {
+                    changeText("the old man says that he cannot help you any further, then, except to point you in the direction of Castle Town - to the north.")
+                    lonePath = true;
+                }
+            } else {
+                changeText("refresh your browser to play again.")
+                buttonClicks = 99;
+            }
+        } else {
+            changeText("the old man says 'ok, i'll make you some " + playerInfo.playerFavoriteFood + " tonight. come sleep at my house, we can get you started on your path to life here.'")
+        }
     } else if (buttonClicks === 99) {
         var three = 3;
         }

@@ -1,6 +1,6 @@
 var init = function (window) {
     'use strict';
-    var 
+    var
         draw = window.opspark.draw,
         physikz = window.opspark.racket.physikz,
         
@@ -33,8 +33,7 @@ var init = function (window) {
         circles.push(circle);
     }
     
-        // TODO 3 / 8 : Call the drawCircle() function 
-        var numCircles = 0;
+        // TODO 3 / 8 : Call the drawCircle() function
     for (var i = 0; i <= 10; i++) {
         setInterval(drawCircle, 1 / i * 3);
     }

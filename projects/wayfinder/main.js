@@ -59,8 +59,8 @@ function clic (ans) {
             }
         }
     } else if (buttonClicks === 5) {
-        if (ans === true) {
-            if (spaghettiPath === true) {
+        if (spaghettiPath === true) {
+            if (ans === true) {
                 changeText("the old man asks if there is anything else he can help you with.")
             } else {
                 changeText("the old man says that's fine. you become a lone wanderer on this world. refresh your browser to play again.")

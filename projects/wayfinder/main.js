@@ -5,6 +5,7 @@ var homePath;
 var namePath;
 var grampsPath;
 var lonePath;
+var spaghettiPath;
 
 var playerInfo = {
     playerName: null,
@@ -43,6 +44,7 @@ function clic (ans) {
         if (path1 === true) {
             if (ans === true) {
                 changeText("the old man gives you some spaghetti.")
+                spaghettiPath = true;
             } else {
                 changeText("you refuse the spaghetti. the old man asks if he can even help you with anything.")
                 path1 === false;
@@ -57,13 +59,8 @@ function clic (ans) {
             }
         }
     } else if (buttonClicks === 5) {
-        if (path1 === true) {
-            if (loneWandererPath === true) {
-                if (ans === true) {
-                    changeText("")
-                }       
-            }
-            if (ans === true) {
+        if (ans === true) {
+            if (spaghettiPath === true) {
                 changeText("the old man asks if there is anything else he can help you with.")
             } else {
                 changeText("the old man says that's fine. you become a lone wanderer on this world. refresh your browser to play again.")
@@ -83,6 +80,7 @@ function clic (ans) {
                 namePath === true;
             } else {
                 changeText("you are null. refresh your browser to play again.")
+                buttonClicks = 99;
             }
         }
     } else if (buttonClicks === 6) {
@@ -97,22 +95,15 @@ function clic (ans) {
         } else  if (homePath === true) {
             if (ans === true) {
                 changeText("you decide to stay and work to live. the old man says he'll be nearby if you need anything. refresh your browser to play again.")
+                buttonClicks = 99;
             } else {
                 changeText("you don't want to stay. the old man asks if you want to stay with him instead.")
-                grampsPath = true;
             }
         } else {
             changeText("the old man says 'Hello, " + playerInfo.playerName + "'")
         }
     } else if (buttonClicks === 7) {
-        if (path1 === true) {
-            if (ans === true) {
-                changeText("you are more than just a wanderer. you are mighty. you are powerful. you are...THETOSCZN!!!")
-            } else {
-                changeText("refresh your browser to play again.")
-                buttonClicks = 99;
-            }
-        } else  if (homePath === true) {
+        if (homePath === true) {
             if (ans === true) {
                 changeText("you decide to stay and work to live. the old man says he'll be nearby if you need anything. refresh your browser to play again.")
                 buttonClicks = 99;
@@ -132,20 +123,13 @@ function clic (ans) {
             changeText("refresh your browser to play again.")
             buttonClicks === 99;
         } else if (homePath ===  true) {
-            if (grampsPath === true) {
-                if (ans === true) {
-                    changeText("you decide to live with the old man, who tells you his name is Garshevik.")
-                } else {
                     changeText("the old man says that he cannot help you any further, then, except to point you in the direction of Castle Town - to the north. refresh your browser to play again.")
                     buttonClicks = 99;
-                }
-            } else {
-                changeText("refresh your browser to play again.")
-                buttonClicks = 99;
-            }
-        } else {
+        } else if (ans === true) {
             addInfo('playerFavoriteFood', "what's your favorite food?")
             changeText("the old man says 'ok, i'll make you some " + playerInfo.playerFavoriteFood + " tonight. come sleep at my house, we can get you started on your path to life here.' refresh your browser to play again.")
+        } else {
+            changeText('the old man gives you poisoned apple headcheese. you die. refresh your browser to play again.')
         }
     } else if (buttonClicks === 99) {
         var three = 3;

@@ -73,6 +73,12 @@ function clic (ans) {
                 changeText("oh. you remain suspended in indecision forever. refresh your browser to play again.")
                 buttonClicks = 99;
             }
+        } else if (loneWandererPath === true) {
+            if (ans === true) {
+                changeText("the old man forgot you can't talk and asks what you want. you don't say anything. refresh your browser to play again.")
+            } else {
+                changeText("you become a lone wanderer. refresh your browser to play again.")
+            }
         } else {
             if (ans === true) {
                 changeText("you find a textbox of your own. the old man asks your name.")

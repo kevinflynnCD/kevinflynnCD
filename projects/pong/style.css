@@ -1,0 +1,65 @@
+html {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: black;
+}
+
+.paddle {
+    background: white;
+    width: 15px;
+    height: 120px;
+    transform-origin: 100%;
+    position: absolute;
+}
+
+#player1 {
+    left: 10%;
+    top: 50%;
+}
+
+#player2 {
+    left: 90%;
+    top: 50%;
+}
+
+#ball {
+    background: white;
+    transform-origin: 50%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#help-ball {
+    background: black;
+    transform-origin: 50%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#score {
+    color: white;
+    position: absolute;
+    transform-origin: 50%;
+    width: 10%;
+    font-size: 400%;
+    top: 5%;
+    left: 45%;
+    text-align: center;
+}
+
+#debugger {
+    color: white;
+    background-color: black;
+    border-color: black;
+    position: absolute;
+    resize: none;
+    list-style-type: none;
+}

@@ -12,18 +12,28 @@
                 position : absolute;
                 bottom : 0%;
                 left : 0;
-                right : 100%;
                 height : 120px;
                 width : 1000000px;
+                background-size : 1000px;
             }
 
             #gelatinous-cube {
-                background-color : rgb(0, 255, 30);
+                background-image : url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/04236ba8-38d0-4177-a92e-e9ece2becc59/ddy1xqz-06f3a399-47fc-40e3-9ec7-e152b85e12d6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA0MjM2YmE4LTM4ZDAtNDE3Ny1hOTJlLWU5ZWNlMmJlY2M1OVwvZGR5MXhxei0wNmYzYTM5OS00N2ZjLTQwZTMtOWVjNy1lMTUyYjg1ZTEyZDYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.PFi5itScUs5ZSQ8HXYDkpijLLI3jaL2BA9t8y3QS2LY);
                 width : 200px;
                 height : 200px;
                 position : absolute;
                 right : 10px;
-                bottom : 80px;
+                top : 0px;
+                background-size : 200px, 200px;
+                transform : rotate(180deg);
+            }
+
+            .player {
+                position : fixed;
+                width : 100px;
+                height : 100px;
+                right : 1250px;
+                top : 455px;
             }
         </style>
     </head>
@@ -32,9 +42,13 @@
         <!--elements-->
         <div id="ground"></div>
         <div id="gelatinous-cube"></div>
+        <div class="player">
+            <img class="player" src="https://freepngimg.com/thumb/john_cena/14-2-john-cena-running-png.png">
+        </div>
 
         <!--scripts-->
         <script src="js/player.js"></script>
         <script src="js/gelatinous-cube.js"></script>
+        <script src="js/update.js"></script>
     </body>
 </html>

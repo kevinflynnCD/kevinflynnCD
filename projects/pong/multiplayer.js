@@ -36,10 +36,18 @@ function moveMPaddles() {
 
     //player 2 paddle
     if(keys.upArrow){
-        paddle2.y -= paddle1.velocity;
+        if(keys.shift) {
+            paddle2.y -= paddle2.velocity + 10;
+        } else {
+            paddle2.y -= paddle1.velocity;
+        }
     }
     if(keys.downArrow){
-        paddle2.y += paddle1.velocity;
+        if(keys.shift) {
+            paddle2.y += paddle2.velocity + 10;
+        } else {
+            paddle2.y += paddle1.velocity;
+        }
     }
 
     //player 1 collisions

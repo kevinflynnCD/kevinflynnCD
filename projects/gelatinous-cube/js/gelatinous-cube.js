@@ -1,15 +1,15 @@
 const cube = document.getElementById('gelatinous-cube');
 
-let positionY = 200;
-let speed = 1;
+let cubePositionY = 200;
+let cubeSpeed = 1;
 
 //idle for jelly
 function cubeBounce () {
-    if (positionY >= 360 || positionY <= 150){
-        speed *= -1;
+    if (cubePositionY >= 520 || cubePositionY <= 150){
+        cubeSpeed *= -1;
     }
 
-    positionY += speed;
+    cubePositionY += cubeSpeed;
 
-    cube.style.top = positionY.toString() + 'px';
+    cube.style.top = cubePositionY.toString() + 'px';
 }

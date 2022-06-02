@@ -1,4 +1,5 @@
 setInterval( () => {
+    idleJohn();
     cubeBounce();
-    speed += .03;
+    cubeSpeed += .03;
 }, 25);

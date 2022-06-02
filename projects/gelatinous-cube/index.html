@@ -23,17 +23,16 @@
                 height : 200px;
                 position : absolute;
                 right : 10px;
-                top : 0px;
                 background-size : 200px, 200px;
                 transform : rotate(180deg);
             }
 
-            .player {
+            #player {
                 position : fixed;
                 width : 100px;
                 height : 100px;
                 right : 1250px;
-                top : 455px;
+                transform : scaleX(-1);
             }
         </style>
     </head>
@@ -42,8 +41,8 @@
         <!--elements-->
         <div id="ground"></div>
         <div id="gelatinous-cube"></div>
-        <div class="player">
-            <img class="player" src="https://freepngimg.com/thumb/john_cena/14-2-john-cena-running-png.png">
+        <div>
+            <img id="player" src="https://freepngimg.com/thumb/john_cena/14-2-john-cena-running-png.png">
         </div>
 
         <!--scripts-->

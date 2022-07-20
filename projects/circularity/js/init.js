@@ -1,3 +1,5 @@
+var music = new Audio('/projects/box-breaker/Music/Rick_Astley_-_Never_Gonna_Give_You_Up_legitmuzic.com.mp3')
+music.play();
 var init = function (window) {
     'use strict';
     var

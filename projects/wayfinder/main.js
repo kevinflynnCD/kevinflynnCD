@@ -19,7 +19,7 @@ function addInfo (info, description) {
 }
 
 function changeText (newText) {
-    document.getElementById("find").innerHTML = newText;
+    document.getElementById("text").innerHTML = newText;
 }
 
 function clic (ans) {

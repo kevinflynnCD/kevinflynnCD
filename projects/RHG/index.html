@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Humor Generator</title>
+        <style>
+
+            body {
+                text-align : center;
+                align-content : center;
+                background-color : rgb(176, 255, 255);
+            }
+
+            #title {
+                padding : 10px;
+            }
+            
+            #text {
+                padding : 10px;
+                background-color: rgba(136, 0, 255, 0.257);
+                border-color: black;
+                border-radius: 5px;
+                border-style: solid;
+                width: 500px;
+                height: 100px;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .b {
+                border-width: 2px;
+                border-style: solid;
+                width: 100px;
+                height: 100px;
+                margin: 20px;
+                size: 100px;
+                background-color: goldenrod;
+                border-color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="e">
+            <h3 id="title">
+               Random Humor Generator
+            </h3>
+            <p id="text"></p>
+        </div>
+        <button class="b" id="yes" onclick="run()">Generate!</button>
+        <p id="textbox"></p>
+        <script src="humor.js"></script>
+        <script src="generator.js"></script>
+    </body>
+</html>
